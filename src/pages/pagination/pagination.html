@@ -1,0 +1,59 @@
+<!--
+  Generated template for the PaginationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>pagination</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  <!-- <div *ngFor="let i of list">
+    <mat-form-field>
+        List length:
+        <input matInput [(ngModel)]="i.name">
+      </mat-form-field>
+      
+      <mat-form-field>
+        Page size:
+        <input matInput [(ngModel)]="pageSize">
+      </mat-form-field>
+      <mat-form-field>
+        Page size options:
+        <input matInput
+               [ngModel]="pageSizeOptions"
+               (ngModelChange)="setPageSizeOptions($event)">
+      </mat-form-field>
+      </div>
+      <mat-paginator [length]="list.length"
+                    [pageSize]="pageSize"
+                    [pageSizeOptions]="pageSizeOptions"
+                    (page)="pageEvent = $event">
+      </mat-paginator>
+      
+      <div *ngIf="pageEvent">
+        <h5>Page Change Event Properties</h5>
+        <div>List length: {{list.length}}</div>
+        <div>Page size: {{pageEvent.pageSize}}</div>
+        <div>Page index: {{pageEvent.pageIndex}}</div>
+      </div>
+<button ion-button (click)="teste()">Teste</button> -->
+
+
+<ion-card *ngFor="let lista of list" style="margin-bottom: 0px;">
+  <ion-card-content>
+     
+        <!-- <ion-input (ionChange)="teste(lista)" [(ngModel)]="lista.name" type="" ></ion-input> -->
+        <ion-icon class="delete" (click)="adicionaDelete(lista)" *ngIf="!lista.deletable" name="trash"></ion-icon> 
+        <ion-icon class="deleteColor" (click)="removeDelete(lista)" *ngIf="lista.deletable" name="trash"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;
+        <input (change)="teste(lista)" [(ngModel)]="lista.name" type="" />
+  </ion-card-content>
+</ion-card>
+
+<button ion-button (click)="salvar()">Salvar</button>
+</ion-content>

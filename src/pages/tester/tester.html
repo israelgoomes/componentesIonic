@@ -13,9 +13,13 @@
 <ion-content padding>
 
  <form [formGroup]="formGroup"> 
-<web-chips [allFruits]="allFruits" valorAtrb="fruit"></web-chips>
+<web-chips [elementos]="allFruits" formControlName="dados" placeholder="Frutas" valorAtrb="fruit" ></web-chips>
 </form> 
 
-<button ion-button (click)="teste2()"></button>
+<!-- <form [formGroup]="formGroup"> 
+  <usi-chips formControlName="dados" [elementos]="allFruits" placeholder="teste" [atributoIdentificadorObjetosEscolhidos]="fruits" [atributoExibicao]="fruit"></usi-chips>
+  </form>  -->
+
+<button ion-button (click)="salvar()"></button>
 
 </ion-content>

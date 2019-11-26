@@ -1,33 +1,20 @@
-<!--
-  Generated template for the WebChipsPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<!-- <ion-header>
-  <ion-navbar>
-    <ion-title>web-chips</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding> -->
-
-
-   <mat-form-field class="example-chip-list">
+<mat-form-field class="example-chip-list">
     <mat-chip-list #chipList aria-label="Fruit selection">
       <mat-chip
-        *ngFor="let fruit of fruits"
+        *ngFor="let fruit of elementosEscolhidos"
         [selectable]="selectable"
         [removable]="removable"
         (removed)="remove(fruit)">
-        {{fruit}} 
+        {{fruit[valorAtrb]}} 
         <!-- <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon> -->
-        &nbsp;<ion-icon matChipRemove *ngIf="removable" (click)="teste(fruit)" name="ios-close"></ion-icon>
+        &nbsp;<ion-icon matChipRemove *ngIf="removable" name="ios-close"></ion-icon>
       </mat-chip>
       <input
-        placeholder="New fruit..."
-        #fruitInput
-        [formControl]="fruitCtrl"
+        [placeholder]="placeholder"
+        #myInput
+        (click)="listarNoClick()"
+        [formControl]="formCtrl"
         [matAutocomplete]="auto"
         [matChipInputFor]="chipList"
         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
@@ -35,20 +22,9 @@
         (matChipInputTokenEnd)="add($event)">
     </mat-chip-list>
     <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-      <mat-option *ngFor="let fruit of allFruits" [value]="fruit.fruit">
-        {{fruit.valorAtrb}}
+      <mat-option *ngFor="let fruit of elementos" [value]="fruit">
+        {{fruit[valorAtrb]}}
       </mat-option>
     </mat-autocomplete>
   </mat-form-field> 
 
-<!-- <h4>Basic mat-select</h4>
-<mat-form-field>
-  <mat-label>Favorite food</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let food of foods" [value]="food.value">
-      {{food.viewValue}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>  -->
-
-<!-- </ion-content> -->

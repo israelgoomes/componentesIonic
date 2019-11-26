@@ -1,4 +1,3 @@
-import { WebChipsComponent } from './../../components/web-chips/web-chips';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { WebChipsPage } from './web-chips';
@@ -7,7 +6,7 @@ import { MatSelectModule, MatExpansionModule, MatAutocompleteModule, MatFormFiel
 
 @NgModule({
   declarations: [
-    WebChipsPage,
+    WebChipsPage
   ],
   imports: [
     MatInputModule,

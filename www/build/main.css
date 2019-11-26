@@ -25696,6 +25696,25 @@ ion-navbar.toolbar {
   min-height: 46px;
 }
 
+usi-chips .mat-form-field-infix {
+  padding: 0.31rem 0px;
+}
+
+page-pagination input {
+  border: none;
+  border-bottom: 1px solid #cecece;
+}
+
+page-pagination .delete {
+  font-size: 25px;
+  color: #cecece;
+}
+
+page-pagination .deleteColor {
+  font-size: 25px;
+  color: red;
+}
+
 page-web-chips ion-icon {
   border-radius: 50% solid transparent;
   color: blue;

@@ -12,5 +12,25 @@
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
 
+
+  <div *ngFor="let i of allFruits, let i = index">
+
+    <ion-item>
+      <ion-label >Name</ion-label>
+      <ion-input type="" [(ngModel)]="i.fruit"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label >Id</ion-label>
+      <ion-input type="" [(ngModel)]="i.id"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label >Teste</ion-label>
+      <ion-input type="" [(ngModel)]="i.teste"></ion-input>
+    </ion-item>
+  </div>
+<button ion-button (click)="salvar()"></button>
+
   <button ion-button (click)="openChips()">Chips</button>
+  <button ion-button (click)="openPagination()">Pagination
+  </button>
 </ion-content>
